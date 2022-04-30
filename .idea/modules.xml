@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Bosta.iml" filepath="$PROJECT_DIR$/.idea/modules/Bosta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Bosta.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Bosta.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bosta/Bosta.bosta.iml" filepath="$PROJECT_DIR$/.idea/modules/bosta/Bosta.bosta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/prettyPopUp/Bosta.prettyPopUp.iml" filepath="$PROJECT_DIR$/.idea/modules/prettyPopUp/Bosta.prettyPopUp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bosta.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/bosta.buildSrc.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="app.bosta.task.presentation.base.utils.Constants" />
+
+    <variable
+      name="viewModel"
+      type="app.bosta.task.presentation.gallery.photos.viewModels.PhotosViewModel" />
+  </data>
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/appCompatEditText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/dimen5"
+      android:background="@drawable/corner_grey"
+      android:drawableStart="@drawable/ic_search"
+      android:drawablePadding="@dimen/dimen12"
+      android:hint="Search In Images"
+      android:imeOptions="actionDone"
+      android:inputType="text"
+      android:maxLines="1"
+      android:padding="@dimen/dimen10"
+      android:textColorHint="@color/colorGray"
+      android:textSize="@dimen/text_size14"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:search="@{viewModel.search}" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rc_suggested_groups"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen5"
+      app:adapter="@{viewModel.adapter}"
+      app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+      app:layout_constraintTop_toBottomOf="@+id/appCompatEditText"
+      app:orientation="@{`1`}"
+      app:span="@{`3`}"
+      app:spanCount="3"
+      tools:listitem="@layout/item_photo" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

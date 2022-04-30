@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+      name="viewModel"
+      type="app.bosta.task.presentation.gallery.image.ZoomViewModel" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+      android:id="@+id/imageView"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:transitionName="image"
+      app:imageZoom="@{viewModel.photo.thumbnailUrl}"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:progressBar="@{progress}" />
+
+
+
+    <ProgressBar
+      android:id="@+id/progress"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:progressTint="@color/colorPrimary"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:layout_width="@dimen/dimen30"
+      android:src="@drawable/ic_back_white"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:onClick="@{(v)->viewModel.back(v)}"
+      android:layout_margin="@dimen/dimen10"
+      android:layout_height="@dimen/dimen30"/>
+
+
+    <View
+      android:id="@+id/view_background"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dimen80"
+      android:background="@drawable/gradient"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      app:layout_constraintTop_toTopOf="@+id/view_background"
+      app:layout_constraintBottom_toBottomOf="@+id/view_background"
+      android:layout_width="match_parent"
+      android:textColor="@color/white"
+      android:lines="2"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:ellipsize="end"
+      android:layout_marginStart="@dimen/dimen5"
+      android:layout_marginEnd="@dimen/dimen5"
+      android:text="@{viewModel.photo.title}"
+      tools:text="asdasd asd dsa asd asdsa dd sasad asdasd asdd sad sasda  dsaasd as d as sadsad  sad sad sdas adasd  dsa dsaas da sd asd asd as asd sa"
+      android:layout_height="wrap_content"/>
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

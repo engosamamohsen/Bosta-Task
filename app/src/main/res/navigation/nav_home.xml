@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  app:startDestination="@id/usersFragment">
+
+  <fragment
+    android:id="@+id/usersFragment"
+    android:name="app.bosta.task.presentation.users.list.UsersFragment"
+    android:label="Bosta Task" >
+    <action
+      android:id="@+id/action_usersFragment_to_albumsFragment"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/albumsFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/albumsFragment"
+    android:name="app.bosta.task.presentation.gallery.albums.AlbumsFragment"
+    android:label="{username}" >
+    <action
+      android:id="@+id/action_albumsFragment_to_photosFragment"
+      app:enterAnim="@anim/anim_slide_in_right"
+      app:exitAnim="@anim/anim_slide_out_left"
+      app:popEnterAnim="@anim/anim_slide_in_left"
+      app:popExitAnim="@anim/anim_slide_out_right"
+      app:destination="@id/photosFragment" />
+    <argument
+      android:name="username"
+      app:argType="string" />
+    <argument
+      android:name="user_id"
+      app:argType="integer" />
+  </fragment>
+  <fragment
+    android:id="@+id/photosFragment"
+    android:name="app.bosta.task.presentation.gallery.photos.views.PhotosFragment"
+    android:label="{album_name}" >
+    <argument
+      android:name="album_name"
+      app:argType="string" />
+    <argument
+      android:name="album_id"
+      app:argType="integer" />
+    <action
+      android:id="@+id/action_photosFragment_to_zoomFragment"
+      app:destination="@id/zoomFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/zoomFragment"
+    android:name="app.bosta.task.presentation.gallery.image.ZoomFragment"
+    android:label="" >
+    <argument
+      android:name="Photo"
+      app:argType="app.bosta.task.domain.gallery.photo.Photo" />
+
+  </fragment>
+
+
+</navigation>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.guilhe:quantity-picker-view:1.2.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7091db7610b7783d146728a92e47936d/transformed/jetified-quantity-picker-view-1.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7091db7610b7783d146728a92e47936d/transformed/jetified-quantity-picker-view-1.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7091db7610b7783d146728a92e47936d/transformed/jetified-quantity-picker-view-1.2.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.guilhe/quantity-picker-view/1.2.4/de8f87c5888db4c3f410813b773827741a71964e/quantity-picker-view-1.2.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.guilhe/quantity-picker-view/1.2.4/630f947887966cd0e9adc17997063274f7c353a2/quantity-picker-view-1.2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
